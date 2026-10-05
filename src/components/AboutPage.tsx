@@ -45,7 +45,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onExploreJournal }) => {
         <div className="relative rounded-3xl overflow-hidden shadow-soft-lift border border-[#EBE1D6] bg-white p-3.5 sm:p-5 washi-tape-butter">
           <div className="aspect-[16/9] relative rounded-2xl overflow-hidden bg-[#EFE7DE]">
             <img
-              src="/src/assets/images/about_slow_living_1791190709151.jpg"
+              src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80"
               alt="Founders enjoying a tranquil morning by an open window"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
