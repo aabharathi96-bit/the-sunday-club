@@ -1,0 +1,6 @@
+{
+  "name": "The Sunday Club",
+  "description": "A little corner for slow days, soft thoughts & beautiful living. A cozy digital lifestyle magazine inspired by slow living, self-care, and peaceful moments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
