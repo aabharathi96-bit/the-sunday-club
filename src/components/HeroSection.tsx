@@ -1,5 +1,6 @@
 import React from 'react';
 import { BookOpen, Coffee, Sparkles, Heart } from 'lucide-react';
+import heroSundayMorning from '../assets/images/hero_sunday_morning_1791190663579.jpg';
 
 interface HeroSectionProps {
   onExploreClick: () => void;
@@ -53,7 +54,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
           <div className="relative rounded-2xl overflow-hidden aspect-[16/9] sm:aspect-[21/9] lg:aspect-[24/10] bg-[#EFE7DE]">
             <img
-              src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1600&q=80"
+              src={heroSundayMorning}
               alt="Cozy sunlit Sunday morning with ceramic mug of coffee, open vintage poetry book, and linen sheets"
               className="w-full h-full object-cover object-center transform hover:scale-[1.02] transition-transform duration-1000 ease-out"
               referrerPolicy="no-referrer"

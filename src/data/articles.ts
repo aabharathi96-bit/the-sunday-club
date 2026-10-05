@@ -1,4 +1,13 @@
 import { Article, SundayMood } from '../types';
+import heroSundayMorning from '../assets/images/hero_sunday_morning_1791190663579.jpg';
+import articleCafeStreet from '../assets/images/article_cafe_street_1791191294313.jpg';
+import aboutSlowLiving from '../assets/images/about_slow_living_1791190709151.jpg';
+import articleCozyCorner from '../assets/images/article_cozy_corner_1791190689327.jpg';
+import articleSunsetBedroom from '../assets/images/article_sunset_bedroom_1791191274458.jpg';
+import articleJournalFlatlay from '../assets/images/article_journal_flatlay_1791190699297.jpg';
+import articleCoffeeMorning from '../assets/images/article_coffee_morning_1791190676570.jpg';
+import articleDigitalDetox from '../assets/images/article_digital_detox_1791191318044.jpg';
+import articleBotanicalFlowers from '../assets/images/article_botanical_flowers_1791191306434.jpg';
 
 export const ARTICLES: Article[] = [
   {
@@ -14,7 +23,7 @@ export const ARTICLES: Article[] = [
     },
     date: 'Oct 4, 2026',
     readTime: '7 min read',
-    heroImage: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=80',
+    heroImage: heroSundayMorning,
     imageAlt: 'Serene sunlit Sunday morning with ceramic coffee cup, vintage book, and warm linen sheets',
     excerpt: 'There is a sacred, unhurried cadence to a Sunday when we choose to step off the conveyor belt of urgency and let the morning gently unfold.',
     introduction: 'There is a quiet, tender magic unique to Sunday mornings. Unlike Saturdays, which often buzz with errands, chores, and social commitments, Sunday carries an unspoken permission to soften. When we deliberately cultivate small, tactile rituals, ordinary hours transform into a personal sanctuary where we can breathe deeply and replenish our inner reserves.',
@@ -130,7 +139,7 @@ export const ARTICLES: Article[] = [
     },
     date: 'Oct 3, 2026',
     readTime: '6 min read',
-    heroImage: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80',
+    heroImage: articleCafeStreet,
     imageAlt: 'Chic Parisian sidewalk café with marble table, matcha latte, croissant, and fresh roses',
     excerpt: 'To romanticize your life is not about living in delusion; it is about deliberately bestowing value, tenderness, and aesthetic care upon the moments you are already living.',
     introduction: 'Somewhere between childhood wonder and adulthood responsibilities, many of us fall into the trap of viewing life as a marathon of tasks to survive between weekends. We rush through breakfast, stare blankly during commutes, and scroll endlessly before sleep. But romanticizing your life is the quiet antidote: it is the art of treating your ordinary Tuesday like a scene from an indie film worth cherishing.',
@@ -198,7 +207,7 @@ export const ARTICLES: Article[] = [
     },
     date: 'Oct 1, 2026',
     readTime: '8 min read',
-    heroImage: 'https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=1200&q=80',
+    heroImage: aboutSlowLiving,
     imageAlt: 'Peaceful woman in chunky knit cardigan looking out a warm sunlit window',
     excerpt: 'Step away from alarms and frantic schedules. Here is a peaceful, restorative blueprint for spending your Sunday with absolute tenderness.',
     introduction: 'A slow Sunday routine is not a rigid military schedule; rather, it is a gentle rhythm of intentional transitions that honors both your physical exhaustion and your spiritual need for spaciousness. By giving structure to your rest, you protect your hours from slipping away into an anxious blur of social media scrolling.',
@@ -274,7 +283,7 @@ export const ARTICLES: Article[] = [
     },
     date: 'Sep 29, 2026',
     readTime: '6 min read',
-    heroImage: 'https://images.unsplash.com/photo-1544457070-4cd773b4d71e?auto=format&fit=crop&w=1200&q=80',
+    heroImage: articleCozyCorner,
     imageAlt: 'Cozy bouclé armchair with glowing amber lamp, stacked books, and soft throw blanket',
     excerpt: 'You do not need a sprawling home to experience sanctuary. All you need is one small, deliberate corner devoted exclusively to comfort, reflection, and quiet solace.',
     introduction: 'Every home needs an anchor of calm—a dedicated spot where work cannot follow you, where you never open spreadsheets, and where your nervous system instantly recognizes that it is safe to unwind. A cozy corner is not just home decor; it is an architectural invitation to breathe.',
@@ -350,7 +359,7 @@ export const ARTICLES: Article[] = [
     },
     date: 'Sep 26, 2026',
     readTime: '7 min read',
-    heroImage: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80',
+    heroImage: articleSunsetBedroom,
     imageAlt: 'Golden hour sunset glowing across cozy cream linen bedsheets with peonies in ceramic vase',
     excerpt: 'When mental fog creeps in and overwhelm threatens your peace, you don’t need an extreme makeover. You simply need a gentle reset.',
     introduction: 'We all inevitably reach points of emotional congestion: unanswered texts piling up, laundry draped across chairs, and a tight, low-grade hum of overwhelm buzzing behind our eyes. When this happens, forcing yourself to hustle harder only compounds the exhaustion. What you need is not a rigorous self-improvement regime, but a compassionate, physical reset.',
@@ -426,7 +435,7 @@ export const ARTICLES: Article[] = [
     },
     date: 'Sep 23, 2026',
     readTime: '6 min read',
-    heroImage: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80',
+    heroImage: articleJournalFlatlay,
     imageAlt: 'Mindful journaling flat lay with brass fountain pen, tea, and botanical florals',
     excerpt: 'Blank pages are patient listeners. Pour a hot drink and explore these seven reflective inquiries to reacquaint yourself with your inner voice.',
     introduction: 'Journaling in the stillness of dawn is not about writing polished prose for an audience. It is about holding an honest, unhurried conversation with yourself before the demands, expectations, and opinions of the external world begin their daily clamor.',
@@ -513,7 +522,7 @@ export const ARTICLES: Article[] = [
     },
     date: 'Sep 20, 2026',
     readTime: '6 min read',
-    heroImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
+    heroImage: heroSundayMorning,
     imageAlt: 'Serene sunlit room with linen textures and warm shadows',
     excerpt: 'Why does sitting still feel like a radical act? Exploring the sweet art of doing nothing and why idleness is the secret cradle of creative joy.',
     introduction: 'Modern culture has conditioned us with a pervasive illness: the guilt of stillness. Even during our designated hours of leisure, we feel compelled to optimize: listening to educational podcasts at 1.5x speed, cataloging workouts, or documenting our leisure for social approval. But doing nothing is not wasted time; it is the fertile soil where the soul renews itself.',
@@ -581,7 +590,7 @@ export const ARTICLES: Article[] = [
     },
     date: 'Sep 17, 2026',
     readTime: '7 min read',
-    heroImage: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80',
+    heroImage: articleCoffeeMorning,
     imageAlt: 'Morning coffee, pastry, and warm breakfast atmosphere',
     excerpt: 'A routine is something you have to do; a ritual is something you choose to savor. Here are seven tiny micro-rituals that can soften even the hardest days.',
     introduction: 'The difference between an empty routine and a transformative ritual lies entirely in intention and attention. Washing your face can be a rushed chore before collapsing into bed, or it can be a loving, mindful baptism marking the official conclusion of your workday. When we imbue micro-moments with awareness, we anchor our emotional state in peace.',
@@ -657,7 +666,7 @@ export const ARTICLES: Article[] = [
     },
     date: 'Sep 14, 2026',
     readTime: '7 min read',
-    heroImage: 'https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=1200&q=80',
+    heroImage: articleDigitalDetox,
     imageAlt: 'Vintage cream bicycle with wicker basket of wildflowers and sourdough bread in golden afternoon sun',
     excerpt: 'Constant connectivity fractures our attention and leaves our nervous systems chronically frayed. Here is how to plan a gentle, restorative 48-hour unplug.',
     introduction: 'We belong to the first generation in human history expected to be reachable every second of every day. But human consciousness was never engineered to carry the collective tragedies, hot takes, and curated successes of billions of strangers simultaneously. Stepping away for a weekend is not anti-technology; it is a vital act of cognitive hygiene.',
@@ -725,7 +734,7 @@ export const ARTICLES: Article[] = [
     },
     date: 'Sep 10, 2026',
     readTime: '8 min read',
-    heroImage: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1200&q=80',
+    heroImage: articleBotanicalFlowers,
     imageAlt: 'Curated hand-tied floral bouquet of cream ranunculus, sweet peas and silk ribbon',
     excerpt: 'It is easy to build a life that looks good from the outside while feeling hollow on the inside. Here is how to construct a reality rooted in genuine resonance.',
     introduction: 'In an era dominated by hyper-curated social algorithms, our desires can easily become copied. We buy clothes matching viral aesthetics, visit cafés designed for photos, and adopt productivity routines crafted by strangers. But the truest luxury in existence is building a quiet life that fits your spirit like a custom linen coat.',

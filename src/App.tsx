@@ -14,6 +14,10 @@ import { SearchModal } from './components/SearchModal';
 import { BookmarksDrawer } from './components/BookmarksDrawer';
 import { soundscapes } from './utils/soundscapes';
 import { Sparkles, ArrowRight, Heart, BookOpen, Coffee, Feather } from 'lucide-react';
+import articleCoffeeMorning from './assets/images/article_coffee_morning_1791190676570.jpg';
+import articleCozyCorner from './assets/images/article_cozy_corner_1791190689327.jpg';
+import articleSunsetBedroom from './assets/images/article_sunset_bedroom_1791191274458.jpg';
+import articleCafeStreet from './assets/images/article_cafe_street_1791191294313.jpg';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'home' | 'journal' | 'about' | 'article'>('home');
@@ -157,7 +161,7 @@ export default function App() {
                     <div className="w-20 h-5 bg-[#F7ECE9]/90 border-x border-[#E3C2BC] absolute -top-2.5 left-1/2 -translate-x-1/2 rotate-1 shadow-2xs z-10" />
                     <div className="aspect-[4/5] rounded-xl overflow-hidden mb-3 bg-[#EAE1D7]">
                       <img
-                        src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
+                        src={articleCoffeeMorning}
                         alt="Breakfast with croissant and coffee"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         referrerPolicy="no-referrer"
@@ -173,7 +177,7 @@ export default function App() {
                     <div className="w-20 h-5 bg-[#E8EFE6]/90 border-x border-[#BFD1BC] absolute -top-2.5 left-1/2 -translate-x-1/2 -rotate-1 shadow-2xs z-10" />
                     <div className="aspect-[4/5] rounded-xl overflow-hidden mb-3 bg-[#EAE1D7]">
                       <img
-                        src="https://images.unsplash.com/photo-1544457070-4cd773b4d71e?auto=format&fit=crop&w=600&q=80"
+                        src={articleCozyCorner}
                         alt="Cozy reading chair and lamp"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         referrerPolicy="no-referrer"
@@ -189,7 +193,7 @@ export default function App() {
                     <div className="w-20 h-5 bg-[#FBF4E4]/90 border-x border-[#DFCCA7] absolute -top-2.5 left-1/2 -translate-x-1/2 rotate-2 shadow-2xs z-10" />
                     <div className="aspect-[4/5] rounded-xl overflow-hidden mb-3 bg-[#EAE1D7]">
                       <img
-                        src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=600&q=80"
+                        src={articleSunsetBedroom}
                         alt="Golden hour bedroom with peonies"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         referrerPolicy="no-referrer"
@@ -205,7 +209,7 @@ export default function App() {
                     <div className="w-20 h-5 bg-[#F7ECE9]/90 border-x border-[#E3C2BC] absolute -top-2.5 left-1/2 -translate-x-1/2 -rotate-2 shadow-2xs z-10" />
                     <div className="aspect-[4/5] rounded-xl overflow-hidden mb-3 bg-[#EAE1D7]">
                       <img
-                        src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80"
+                        src={articleCafeStreet}
                         alt="Sidewalk café with matcha and roses"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         referrerPolicy="no-referrer"
