@@ -47,6 +47,19 @@ export default function App() {
     }
   }, [savedArticleIds]);
 
+  // Dynamic SEO document title synchronization
+  useEffect(() => {
+    if (activeTab === 'article' && selectedArticle) {
+      document.title = `${selectedArticle.title} — The Sunday Club`;
+    } else if (activeTab === 'journal') {
+      document.title = `The Sunday Journal — Slow Living Essays & Guides | The Sunday Club`;
+    } else if (activeTab === 'about') {
+      document.title = `About The Sunday Club — Our Philosophy of Slow & Soft Living`;
+    } else {
+      document.title = `The Sunday Club — A Little Corner for Slow Days & Soft Living`;
+    }
+  }, [activeTab, selectedArticle]);
+
   const toggleBookmark = (id: string) => {
     setSavedArticleIds((prev) =>
       prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
@@ -147,9 +160,9 @@ export default function App() {
                     <span>Scrapbook of Slow Moments</span>
                     <span className="text-[#637F5E]">✦</span>
                   </div>
-                  <h3 className="font-display text-3xl sm:text-4xl text-[#221C18]">
+                  <h2 className="font-display text-3xl sm:text-4xl text-[#221C18]">
                     A Quiet Visual Diary
-                  </h3>
+                  </h2>
                   <p className="font-handwriting text-xl text-[#7A6A5C]">
                     ~ little snapshots of warm coffee, sunlight, and soft thoughts ~
                   </p>
@@ -162,7 +175,7 @@ export default function App() {
                     <div className="aspect-[4/5] rounded-xl overflow-hidden mb-3 bg-[#EAE1D7]">
                       <img
                         src={articleCoffeeMorning}
-                        alt="Breakfast with croissant and coffee"
+                        alt="Slow Sunday morning breakfast with buttery croissant, fresh drip coffee, and ceramic mug"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         referrerPolicy="no-referrer"
                       />
@@ -178,7 +191,7 @@ export default function App() {
                     <div className="aspect-[4/5] rounded-xl overflow-hidden mb-3 bg-[#EAE1D7]">
                       <img
                         src={articleCozyCorner}
-                        alt="Cozy reading chair and lamp"
+                        alt="Cozy reading nook sanctuary with bouclé armchair, warm floor lamp, and soft linen throw"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         referrerPolicy="no-referrer"
                       />
@@ -194,7 +207,7 @@ export default function App() {
                     <div className="aspect-[4/5] rounded-xl overflow-hidden mb-3 bg-[#EAE1D7]">
                       <img
                         src={articleSunsetBedroom}
-                        alt="Golden hour bedroom with peonies"
+                        alt="Sun-drenched bedroom during golden hour with cream linen bedding and fresh peonies in a vase"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         referrerPolicy="no-referrer"
                       />
@@ -210,7 +223,7 @@ export default function App() {
                     <div className="aspect-[4/5] rounded-xl overflow-hidden mb-3 bg-[#EAE1D7]">
                       <img
                         src={articleCafeStreet}
-                        alt="Sidewalk café with matcha and roses"
+                        alt="Parisian sidewalk café morning with matcha latte, freshly baked croissant, and pink garden roses"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         referrerPolicy="no-referrer"
                       />

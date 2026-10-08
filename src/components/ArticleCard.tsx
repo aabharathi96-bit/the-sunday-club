@@ -110,7 +110,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
             <div className="flex items-center gap-3">
               <img
                 src={article.author.avatar}
-                alt={article.author.name}
+                alt={`${article.author.name}, ${article.author.role}`}
                 className="w-10 h-10 rounded-full object-cover border border-[#DFD3C6] shadow-2xs"
               />
               <div className="text-left">

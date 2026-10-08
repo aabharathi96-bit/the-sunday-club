@@ -1,0 +1,6 @@
+# Robots.txt for The Sunday Club
+User-agent: *
+Allow: /
+
+# XML Sitemap
+Sitemap: https://the-sunday-club-delta.vercel.app/sitemap.xml

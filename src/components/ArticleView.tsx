@@ -202,7 +202,7 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
           <div className="pt-4 flex items-center justify-center gap-3">
             <img
               src={article.author.avatar}
-              alt={article.author.name}
+              alt={`${article.author.name}, ${article.author.role}`}
               className="w-11 h-11 rounded-full object-cover border border-[#DFD5C7]"
             />
             <div className="text-left">
@@ -337,7 +337,7 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
           <div className="my-10 p-6 rounded-2xl bg-[#FCFAF7] border border-[#E8DFD3] flex items-center gap-4">
             <img
               src={article.author.avatar}
-              alt={article.author.name}
+              alt={`${article.author.name}, ${article.author.role}`}
               className="w-14 h-14 rounded-full object-cover border border-[#D9CFC1]"
             />
             <div className="space-y-1">
