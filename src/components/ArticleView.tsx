@@ -111,6 +111,54 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
     (a) => article.relatedIds.includes(a.id) || (a.category === article.category && a.id !== article.id)
   ).slice(0, 3);
 
+  const renderParagraphWithLinks = (text: string) => {
+    const parts: (string | React.ReactNode)[] = [];
+    const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    let lastIndex = 0;
+    let match: RegExpExecArray | null;
+
+    while ((match = regex.exec(text)) !== null) {
+      if (match.index > lastIndex) {
+        parts.push(text.substring(lastIndex, match.index));
+      }
+      const linkText = match[1];
+      const linkUrl = match[2];
+
+      parts.push(
+        <a
+          key={match.index}
+          href={linkUrl}
+          onClick={(e) => {
+            if (linkUrl.startsWith('/')) {
+              e.preventDefault();
+              if (linkUrl === '/') {
+                onBack();
+              } else {
+                const slug = linkUrl.replace(/^\/blog\//, '').replace(/\/$/, '');
+                const found = allArticles.find((a) => a.slug === slug);
+                if (found) {
+                  onSelectArticle(found);
+                } else {
+                  window.location.href = linkUrl;
+                }
+              }
+            }
+          }}
+          className="text-[#8C6D58] underline decoration-[#CDBBB0] decoration-1 underline-offset-4 hover:text-[#574335] hover:decoration-[#8C6D58] font-medium transition-colors cursor-pointer"
+        >
+          {linkText}
+        </a>
+      );
+      lastIndex = regex.lastIndex;
+    }
+
+    if (lastIndex < text.length) {
+      parts.push(text.substring(lastIndex));
+    }
+
+    return parts.length > 0 ? parts : text;
+  };
+
   return (
     <div className="min-h-screen bg-[#FAF7F2] pb-24">
       {/* Reading Progress Line */}
@@ -252,10 +300,36 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
                 </h2>
               );
             }
+            if (block.type === 'subheading') {
+              return (
+                <h3
+                  key={idx}
+                  className="font-display text-xl sm:text-2xl text-[#241F1B] pt-4 pb-1 font-medium leading-snug"
+                >
+                  {block.text}
+                </h3>
+              );
+            }
+            if (block.type === 'callout') {
+              return (
+                <div
+                  key={idx}
+                  className="my-5 p-5 sm:p-6 rounded-2xl bg-[#F4ECE2] border-l-4 border-[#8C6D58] shadow-2xs space-y-2"
+                >
+                  <div className="flex items-center gap-1.5 text-[11px] font-sans uppercase tracking-widest text-[#8C6D58] font-semibold">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>Direct Answer (AEO Summary)</span>
+                  </div>
+                  <p className="font-serif text-base sm:text-lg text-[#2A231D] leading-relaxed italic">
+                    {renderParagraphWithLinks(block.text)}
+                  </p>
+                </div>
+              );
+            }
             if (block.type === 'paragraph') {
               return (
                 <p key={idx} className="text-[#362E27]">
-                  {block.text}
+                  {renderParagraphWithLinks(block.text)}
                 </p>
               );
             }
@@ -282,7 +356,7 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
                   {block.items.map((item, itemIdx) => (
                     <li key={itemIdx} className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#8C7665] mt-2.5 shrink-0" />
-                      <span className="text-[#362E27]">{item}</span>
+                      <span className="text-[#362E27]">{renderParagraphWithLinks(item)}</span>
                     </li>
                   ))}
                 </ul>
@@ -290,6 +364,39 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
             }
             return null;
           })}
+
+          {/* AEO Frequently Asked Questions Section */}
+          {article.faq && article.faq.length > 0 && (
+            <section className="my-10 p-6 sm:p-8 rounded-3xl bg-[#FAF5EE] border border-[#E8DFD3] shadow-sm space-y-6">
+              <div className="space-y-1">
+                <div className="flex items-center gap-1.5 text-xs font-sans uppercase tracking-widest text-[#8C7665] font-semibold">
+                  <Sparkles className="w-4 h-4 text-[#A88874]" />
+                  <span>Answer Engine Optimization · Quick Answers</span>
+                </div>
+                <h2 className="font-display text-2xl sm:text-3xl text-[#241F1B]">
+                  Frequently Asked Questions
+                </h2>
+              </div>
+              <div className="space-y-4">
+                {article.faq.map((item, faqIdx) => (
+                  <div key={faqIdx} className="p-4 sm:p-5 rounded-2xl bg-white border border-[#EDE3D6] space-y-2 shadow-2xs">
+                    <h3 className="font-display text-lg sm:text-xl text-[#26201B] font-medium">
+                      {item.question}
+                    </h3>
+                    <p className="font-sans text-sm sm:text-base text-[#4A4036] leading-relaxed">
+                      <strong className="text-[#26201B] font-semibold">Direct Answer: </strong>
+                      {item.directAnswer}
+                    </p>
+                    {item.detailedAnswer && (
+                      <p className="font-sans text-xs sm:text-sm text-[#6E6155] leading-relaxed pt-1 border-t border-[#F3ECE4]">
+                        {item.detailedAnswer}
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Practical Tips Box */}
           {article.practicalTips.length > 0 && (

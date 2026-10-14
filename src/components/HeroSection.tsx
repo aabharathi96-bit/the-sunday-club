@@ -39,10 +39,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
           <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-medium tracking-tight text-[#221C18] leading-[1.08] [text-wrap:balance]">
             The Sunday Club
+            <span className="block text-xl sm:text-2xl lg:text-3xl text-[#7A6655] font-serif italic font-normal mt-2 tracking-normal">
+              A Slow Living Blog for Unhurried Days
+            </span>
           </h1>
 
           <p className="font-serif italic text-lg sm:text-2xl text-[#5C5044] max-w-2xl mx-auto leading-relaxed">
-            “A little corner for slow days, soft thoughts &amp; beautiful living.”
+            “A slow living blog and digital sanctuary celebrating intentional habits, peaceful rituals, and cozy everyday moments.”
           </p>
         </div>
 

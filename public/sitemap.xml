@@ -2,80 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://the-sunday-club-delta.vercel.app/</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://the-sunday-club-delta.vercel.app/#journal</loc>
-    <lastmod>2026-10-07</lastmod>
+    <loc>https://the-sunday-club-delta.vercel.app/blog/slow-living-tips/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://the-sunday-club-delta.vercel.app/blog/self-care-routine/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://the-sunday-club-delta.vercel.app/blog/cozy-lifestyle-ideas/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://the-sunday-club-delta.vercel.app/journal</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://the-sunday-club-delta.vercel.app/#about</loc>
-    <lastmod>2026-10-07</lastmod>
+    <loc>https://the-sunday-club-delta.vercel.app/about</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://the-sunday-club-delta.vercel.app/#article/10-little-things-that-make-a-sunday-feel-special</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://the-sunday-club-delta.vercel.app/#article/how-to-romanticize-your-everyday-life</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://the-sunday-club-delta.vercel.app/#article/the-ultimate-slow-sunday-routine</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://the-sunday-club-delta.vercel.app/#article/creating-your-perfect-cozy-corner</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://the-sunday-club-delta.vercel.app/#article/things-to-do-when-you-need-a-little-reset</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://the-sunday-club-delta.vercel.app/#article/7-journaling-prompts-for-your-next-quiet-morning</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://the-sunday-club-delta.vercel.app/#article/the-art-of-doing-nothing</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://the-sunday-club-delta.vercel.app/#article/little-rituals-that-can-change-your-mood</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://the-sunday-club-delta.vercel.app/#article/your-guide-to-a-digital-detox-weekend</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://the-sunday-club-delta.vercel.app/#article/building-a-life-that-feels-like-you</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>

@@ -43,20 +43,28 @@ export const Navbar: React.FC<NavbarProps> = ({
           
           {/* Zone 1: Wordmark */}
           <div className="flex items-center gap-3">
-            <button
-              onClick={() => handleNavClick('home')}
+            <a
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick('home');
+              }}
               className="text-left group cursor-pointer"
             >
               <span className="font-display text-2xl sm:text-3xl font-medium tracking-tight text-[#221C18] group-hover:text-[#685545] transition-colors">
                 The Sunday Club
               </span>
-            </button>
+            </a>
           </div>
 
           {/* Zone 2: Navigation Links (Text with underline hover) */}
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-[#5E574F]">
-            <button
-              onClick={() => handleNavClick('home')}
+            <a
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick('home');
+              }}
               className={`pb-1 transition-all hover:text-[#2C2723] cursor-pointer ${
                 activeTab === 'home'
                   ? 'text-[#2C2723] border-b-2 border-[#2C2723]'
@@ -64,7 +72,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               }`}
             >
               Home
-            </button>
+            </a>
             <button
               onClick={() => handleNavClick('journal', 'Lifestyle')}
               className="pb-1 transition-all hover:text-[#2C2723] cursor-pointer hover:border-b-2 hover:border-[#8E8478]"
@@ -83,8 +91,12 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               Culture
             </button>
-            <button
-              onClick={() => handleNavClick('journal', 'All')}
+            <a
+              href="/journal"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick('journal', 'All');
+              }}
               className={`pb-1 transition-all hover:text-[#2C2723] cursor-pointer ${
                 activeTab === 'journal'
                   ? 'text-[#2C2723] border-b-2 border-[#2C2723]'
@@ -92,9 +104,13 @@ export const Navbar: React.FC<NavbarProps> = ({
               }`}
             >
               Journal
-            </button>
-            <button
-              onClick={() => handleNavClick('about')}
+            </a>
+            <a
+              href="/about"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick('about');
+              }}
               className={`pb-1 transition-all hover:text-[#2C2723] cursor-pointer ${
                 activeTab === 'about'
                   ? 'text-[#2C2723] border-b-2 border-[#2C2723]'
@@ -102,7 +118,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               }`}
             >
               About
-            </button>
+            </a>
           </nav>
 
           {/* Zone 3: Interactive Affordances (Search, Ambient, Bookmarks) */}

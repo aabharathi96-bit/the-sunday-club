@@ -43,6 +43,13 @@ export interface Article {
   featured?: boolean;
   relatedIds: string[];
   likesCount?: number;
+  url?: string;
+  seoTitle?: string;
+  metaDescription?: string;
+  mainKeyword?: string;
+  relatedKeywords?: string[];
+  canonicalUrl?: string;
+  faq?: { question: string; directAnswer: string; detailedAnswer: string }[];
 }
 
 export interface SundayMood {

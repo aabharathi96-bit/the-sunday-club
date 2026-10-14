@@ -4,9 +4,10 @@ import { Category } from '../types';
 
 interface FooterProps {
   onNavigate: (tab: 'home' | 'journal' | 'about', categoryFilter?: Category) => void;
+  onNavigateArticle?: (slug: string) => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+export const Footer: React.FC<FooterProps> = ({ onNavigate, onNavigateArticle }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -18,15 +19,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#3B332C]">
           
           {/* Brand Column */}
-          <div className="lg:col-span-5 space-y-4">
+          <div className="lg:col-span-4 space-y-4">
             <h3 className="font-display text-2xl sm:text-3xl text-[#FAF7F2] font-medium tracking-tight">
               The Sunday Club
             </h3>
             <p className="font-serif italic text-base text-[#B2A696] max-w-sm leading-relaxed">
-              “A little corner for slow days, soft thoughts &amp; beautiful living.”
+              “A slow living blog and gentle sanctuary for unhurried days &amp; soft thoughts.”
             </p>
             <p className="text-xs text-[#8F8374] leading-relaxed max-w-md font-sans">
-              Inspired by slow mornings, self-care, everyday beauty, nostalgia, books, music, and quiet rituals. Created for souls who savor the unhurried life.
+              Inspired by slow mornings, self-care routines, cozy home aesthetics, books, and quiet rituals. Created for readers who cherish an intentional life.
             </p>
           </div>
 
@@ -37,44 +38,107 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </span>
             <ul className="space-y-2 text-sm text-[#A89C8E]">
               <li>
-                <button
-                  onClick={() => onNavigate('home')}
+                <a
+                  href="/"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate('home');
+                  }}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   Home
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('journal', 'All')}
+                <a
+                  href="/journal"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate('journal', 'All');
+                  }}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   The Journal
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('about')}
+                <a
+                  href="/about"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate('about');
+                  }}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   About The Club
-                </button>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Featured Guides (Internal Links with Descriptive Anchors) */}
+          <div className="lg:col-span-3 space-y-3">
+            <span className="text-xs uppercase tracking-widest text-[#BDB09F] font-sans font-medium">
+              Featured Guides
+            </span>
+            <ul className="space-y-2 text-sm text-[#A89C8E]">
+              <li>
+                <a
+                  href="/blog/slow-living-tips/"
+                  onClick={(e) => {
+                    if (onNavigateArticle) {
+                      e.preventDefault();
+                      onNavigateArticle('slow-living-tips');
+                    }
+                  }}
+                  className="hover:text-white transition-colors cursor-pointer block"
+                >
+                  Read our slow living tips
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/blog/self-care-routine/"
+                  onClick={(e) => {
+                    if (onNavigateArticle) {
+                      e.preventDefault();
+                      onNavigateArticle('self-care-routine');
+                    }
+                  }}
+                  className="hover:text-white transition-colors cursor-pointer block"
+                >
+                  Explore a simple self-care routine
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/blog/cozy-lifestyle-ideas/"
+                  onClick={(e) => {
+                    if (onNavigateArticle) {
+                      e.preventDefault();
+                      onNavigateArticle('cozy-lifestyle-ideas');
+                    }
+                  }}
+                  className="hover:text-white transition-colors cursor-pointer block"
+                >
+                  Discover cozy lifestyle ideas
+                </a>
               </li>
             </ul>
           </div>
 
           {/* Editorial Pillars */}
-          <div className="lg:col-span-2 space-y-3">
+          <div className="lg:col-span-3 space-y-3">
             <span className="text-xs uppercase tracking-widest text-[#BDB09F] font-sans font-medium">
-              Pillars
+              Topics &amp; Community
             </span>
-            <ul className="space-y-2 text-sm text-[#A89C8E]">
+            <ul className="space-y-1.5 text-xs text-[#A89C8E]">
               <li>
                 <button
                   onClick={() => onNavigate('journal', 'Slow Living')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
-                  Slow Living
+                  Slow Living Essays
                 </button>
               </li>
               <li>
@@ -82,7 +146,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   onClick={() => onNavigate('journal', 'Self-Care')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
-                  Self-Care
+                  Self-Care Rituals
                 </button>
               </li>
               <li>
@@ -90,23 +154,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   onClick={() => onNavigate('journal', 'Lifestyle')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
-                  Lifestyle
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate('journal', 'Culture')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
-                  Culture &amp; Art
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate('journal', 'Inspiration')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
-                  Inspiration
+                  Cozy Lifestyle &amp; Home
                 </button>
               </li>
             </ul>

@@ -93,7 +93,16 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
             </div>
 
             <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl text-[#221C18] leading-[1.18] group-hover:text-[#6E5848] transition-colors">
-              {article.title}
+              <a
+                href={article.url || `/blog/${article.slug}/`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  onSelect(article);
+                }}
+                className="hover:underline hover:decoration-[#8C7665] underline-offset-4"
+              >
+                {article.title}
+              </a>
             </h2>
 
             <p className="font-sans text-sm sm:text-base text-[#5E544A] leading-relaxed line-clamp-3">
@@ -146,9 +155,10 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
                 <Bookmark className={`w-3.5 h-3.5 ${isBookmarked ? 'fill-current' : ''}`} />
               </button>
 
-              <button
-                type="button"
+              <a
+                href={article.url || `/blog/${article.slug}/`}
                 onClick={(e) => {
+                  e.preventDefault();
                   e.stopPropagation();
                   onSelect(article);
                 }}
@@ -156,7 +166,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
               >
                 <span>Read Story</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -214,7 +224,16 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
           </div>
 
           <h3 className="font-display text-xl text-[#221C18] leading-snug group-hover:text-[#685343] transition-colors">
-            {article.title}
+            <a
+              href={article.url || `/blog/${article.slug}/`}
+              onClick={(e) => {
+                e.preventDefault();
+                onSelect(article);
+              }}
+              className="hover:underline hover:decoration-[#8C7665] underline-offset-2"
+            >
+              {article.title}
+            </a>
           </h3>
 
           <p className="font-sans text-xs sm:text-sm text-[#665B51] leading-relaxed line-clamp-2">
@@ -225,9 +244,10 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
         {/* Footer with date and Read More button */}
         <div className="pt-3 border-t border-[#F2ECE3] flex items-center justify-between text-xs text-[#80756A]">
           <span className="font-serif italic">{article.date}</span>
-          <button
-            type="button"
+          <a
+            href={article.url || `/blog/${article.slug}/`}
             onClick={(e) => {
+              e.preventDefault();
               e.stopPropagation();
               onSelect(article);
             }}
@@ -235,7 +255,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
           >
             <span>Read More</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
-          </button>
+          </a>
         </div>
       </div>
     </article>

@@ -12,6 +12,7 @@ import { JournalPage } from './components/JournalPage';
 import { AboutPage } from './components/AboutPage';
 import { SearchModal } from './components/SearchModal';
 import { BookmarksDrawer } from './components/BookmarksDrawer';
+import { HomeAeoSection } from './components/HomeAeoSection';
 import { soundscapes } from './utils/soundscapes';
 import { Sparkles, ArrowRight, Heart, BookOpen, Coffee, Feather } from 'lucide-react';
 import articleCoffeeMorning from './assets/images/article_coffee_morning_1791190676570.jpg';
@@ -19,10 +20,46 @@ import articleCozyCorner from './assets/images/article_cozy_corner_1791190689327
 import articleSunsetBedroom from './assets/images/article_sunset_bedroom_1791191274458.jpg';
 import articleCafeStreet from './assets/images/article_cafe_street_1791191294313.jpg';
 
+// Route parser to support direct browser URLs (e.g. /blog/slow-living-tips/)
+const parseCurrentRoute = (): { tab: 'home' | 'journal' | 'about' | 'article'; article: Article | null } => {
+  if (typeof window === 'undefined') return { tab: 'home', article: null };
+  const pathname = window.location.pathname.replace(/\/$/, '') || '/';
+  const hash = window.location.hash;
+
+  if (pathname === '/' && (!hash || hash === '#home')) {
+    return { tab: 'home', article: null };
+  }
+  if (pathname === '/journal' || hash === '#journal') {
+    return { tab: 'journal', article: null };
+  }
+  if (pathname === '/about' || hash === '#about') {
+    return { tab: 'about', article: null };
+  }
+
+  let slug = '';
+  if (pathname.startsWith('/blog/')) {
+    slug = pathname.replace(/^\/blog\//, '').replace(/\/$/, '');
+  } else if (pathname.startsWith('/article/')) {
+    slug = pathname.replace(/^\/article\//, '').replace(/\/$/, '');
+  } else if (hash.startsWith('#article/')) {
+    slug = hash.replace(/^#article\//, '');
+  }
+
+  if (slug) {
+    const found = ARTICLES.find((a) => a.slug === slug || a.id === slug);
+    if (found) {
+      return { tab: 'article', article: found };
+    }
+  }
+
+  return { tab: 'home', article: null };
+};
+
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'home' | 'journal' | 'about' | 'article'>('home');
+  const initialRoute = parseCurrentRoute();
+  const [activeTab, setActiveTab] = useState<'home' | 'journal' | 'about' | 'article'>(initialRoute.tab);
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
-  const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
+  const [selectedArticle, setSelectedArticle] = useState<Article | null>(initialRoute.article);
   
   // Bookmarks persistence
   const [savedArticleIds, setSavedArticleIds] = useState<string[]>(() => {
@@ -47,17 +84,77 @@ export default function App() {
     }
   }, [savedArticleIds]);
 
-  // Dynamic SEO document title synchronization
+  // Handle browser back and forward navigation
   useEffect(() => {
+    const handlePopState = () => {
+      const route = parseCurrentRoute();
+      setActiveTab(route.tab);
+      setSelectedArticle(route.article);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  // Comprehensive SEO document title, meta tags, and canonical URL synchronization
+  useEffect(() => {
+    const updateOrCreateMeta = (selector: string, attr: string, value: string) => {
+      let element = document.querySelector(selector);
+      if (!element) {
+        element = document.createElement(selector.startsWith('meta') ? 'meta' : 'link');
+        if (selector.includes('[name=')) {
+          const match = selector.match(/name="([^"]+)"/);
+          if (match) element.setAttribute('name', match[1]);
+        } else if (selector.includes('[property=')) {
+          const match = selector.match(/property="([^"]+)"/);
+          if (match) element.setAttribute('property', match[1]);
+        } else if (selector.includes('[rel=')) {
+          const match = selector.match(/rel="([^"]+)"/);
+          if (match) element.setAttribute('rel', match[1]);
+        }
+        document.head.appendChild(element);
+      }
+      element.setAttribute(attr, value);
+    };
+
+    let title = 'The Sunday Club — Slow Living Blog & Mindful Rituals';
+    let description = 'Welcome to The Sunday Club, a slow living blog dedicated to simple habits, peaceful everyday routines, and cozy inspiration for an intentional life.';
+    let canonical = 'https://the-sunday-club-delta.vercel.app/';
+    let ogImage = 'https://the-sunday-club-delta.vercel.app/images/hero_sunday_morning_1791190663579.jpg';
+    let ogImageAlt = 'Cozy sunlit Sunday morning with ceramic mug of coffee, open vintage poetry book, and linen sheets';
+
     if (activeTab === 'article' && selectedArticle) {
-      document.title = `${selectedArticle.title} — The Sunday Club`;
+      title = selectedArticle.seoTitle || `${selectedArticle.title} | The Sunday Club`;
+      description = selectedArticle.metaDescription || selectedArticle.excerpt;
+      canonical = selectedArticle.canonicalUrl || `https://the-sunday-club-delta.vercel.app/blog/${selectedArticle.slug}/`;
+      if (selectedArticle.heroImage) {
+        ogImage = selectedArticle.heroImage;
+        ogImageAlt = selectedArticle.imageAlt;
+      }
     } else if (activeTab === 'journal') {
-      document.title = `The Sunday Journal — Slow Living Essays & Guides | The Sunday Club`;
+      title = 'The Sunday Journal — Slow Living Essays & Guides | The Sunday Club';
+      description = 'Browse our complete library of slow living essays, self-care routines, and cozy lifestyle guides designed for intentional living and everyday calm.';
+      canonical = 'https://the-sunday-club-delta.vercel.app/journal';
     } else if (activeTab === 'about') {
-      document.title = `About The Sunday Club — Our Philosophy of Slow & Soft Living`;
-    } else {
-      document.title = `The Sunday Club — A Little Corner for Slow Days & Soft Living`;
+      title = 'About The Sunday Club — Our Philosophy of Slow & Soft Living';
+      description = 'Discover the story and ethos behind The Sunday Club, a slow living blog devoted to quiet mornings, intentional habits, and mindful everyday beauty.';
+      canonical = 'https://the-sunday-club-delta.vercel.app/about';
     }
+
+    // Apply document title and meta updates
+    document.title = title;
+    updateOrCreateMeta('meta[name="description"]', 'content', description);
+    updateOrCreateMeta('link[rel="canonical"]', 'href', canonical);
+    updateOrCreateMeta('meta[property="og:title"]', 'content', title);
+    updateOrCreateMeta('meta[property="og:description"]', 'content', description);
+    updateOrCreateMeta('meta[property="og:url"]', 'content', canonical);
+    updateOrCreateMeta('meta[property="og:image"]', 'content', ogImage);
+    updateOrCreateMeta('meta[property="og:image:alt"]', 'content', ogImageAlt);
+    updateOrCreateMeta('meta[name="twitter:title"]', 'content', title);
+    updateOrCreateMeta('meta[name="twitter:description"]', 'content', description);
+    updateOrCreateMeta('meta[name="twitter:image"]', 'content', ogImage);
+    updateOrCreateMeta('meta[name="twitter:image:alt"]', 'content', ogImageAlt);
   }, [activeTab, selectedArticle]);
 
   const toggleBookmark = (id: string) => {
@@ -88,13 +185,28 @@ export default function App() {
     }
     setActiveTab(tab);
     setSelectedArticle(null);
+    const targetPath = tab === 'home' ? '/' : `/${tab}`;
+    if (window.location.pathname !== targetPath) {
+      window.history.pushState(null, '', targetPath);
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleSelectArticle = (article: Article) => {
     setSelectedArticle(article);
     setActiveTab('article');
+    const targetUrl = article.url || `/blog/${article.slug}/`;
+    if (window.location.pathname !== targetUrl) {
+      window.history.pushState(null, '', targetUrl);
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleNavigateArticleBySlug = (slug: string) => {
+    const found = ARTICLES.find((a) => a.slug === slug || a.id === slug);
+    if (found) {
+      handleSelectArticle(found);
+    }
   };
 
   const featuredArticle = ARTICLES.find((a) => a.featured) || ARTICLES[0];
@@ -236,6 +348,9 @@ export default function App() {
               </div>
             </section>
 
+            {/* AEO (Answer Engine Optimization) Question-and-Answer Section */}
+            <HomeAeoSection onNavigateArticle={handleNavigateArticleBySlug} />
+
             {/* Latest Journal Entries Grid */}
             <section className="py-20 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-4 border-b border-[#EAE1D7]">
@@ -319,7 +434,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <Footer onNavigate={handleNavigate} />
+      <Footer onNavigate={handleNavigate} onNavigateArticle={handleNavigateArticleBySlug} />
 
       {/* Search Modal */}
       <SearchModal
