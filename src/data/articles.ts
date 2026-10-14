@@ -308,7 +308,7 @@ export const ARTICLES: Article[] = [
       'Track how you feel after your rituals—notice the lighter head, relaxed jaw, and deeper breath.'
     ],
     conclusion: 'Creating a simple self-care routine is the greatest gift you can offer both to yourself and to the people you love. When your inner cup is full, kindness, patience, and creativity flow effortlessly. Start small, honor your limits, and treat yourself with the gentle patience you would extend to a dear friend.',
-    tags: ['Self-Care', 'Daily Habits', 'Mental Health', 'Wellness'],
+    tags: ['Self-Care', 'Daily Self-Care Habits', 'Mental Health', 'Wellness'],
     featured: true,
     relatedIds: ['1', '3', '5'],
     likesCount: 289
