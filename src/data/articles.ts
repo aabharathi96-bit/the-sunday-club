@@ -23,7 +23,7 @@ export const ARTICLES: Article[] = [
     category: 'Slow Living',
     mainKeyword: 'slow living tips',
     relatedKeywords: ['how to live a slower life', 'simple slow living habits'],
-    seoTitle: 'Slow Living Tips for a Peaceful Life | The Sunday Club',
+    seoTitle: 'Slow Living Tips for a Peaceful Everyday Life | The Sunday Club',
     metaDescription: 'Discover practical slow living tips, simple slow living habits, and guidance on how to live a slower life filled with mindful presence and everyday calm.',
     author: {
       name: 'Clara Vance',
@@ -323,7 +323,7 @@ export const ARTICLES: Article[] = [
     category: 'Lifestyle',
     mainKeyword: 'cozy lifestyle ideas',
     relatedKeywords: ['cozy home ideas', 'simple living inspiration'],
-    seoTitle: 'Cozy Lifestyle Ideas for a Relaxing Home | The Sunday Club',
+    seoTitle: 'Cozy Lifestyle Ideas for a More Relaxing Home | The Sunday Club',
     metaDescription: 'Transform your space with inspiring cozy lifestyle ideas, welcoming cozy home ideas, and soothing simple living inspiration for deep relaxation and peace.',
     author: {
       name: 'Clara Vance',
