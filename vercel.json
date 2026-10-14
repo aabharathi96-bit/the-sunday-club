@@ -1,5 +1,30 @@
 {
+  "cleanUrls": true,
   "rewrites": [
+    {
+      "source": "/blog/self-care-routine/",
+      "destination": "/blog/self-care-routine/index.html"
+    },
+    {
+      "source": "/blog/self-care-routine",
+      "destination": "/blog/self-care-routine/index.html"
+    },
+    {
+      "source": "/blog/slow-living-tips/",
+      "destination": "/blog/slow-living-tips/index.html"
+    },
+    {
+      "source": "/blog/slow-living-tips",
+      "destination": "/blog/slow-living-tips/index.html"
+    },
+    {
+      "source": "/blog/cozy-lifestyle-ideas/",
+      "destination": "/blog/cozy-lifestyle-ideas/index.html"
+    },
+    {
+      "source": "/blog/cozy-lifestyle-ideas",
+      "destination": "/blog/cozy-lifestyle-ideas/index.html"
+    },
     {
       "source": "/(.*)",
       "destination": "/index.html"

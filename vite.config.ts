@@ -8,7 +8,27 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig(() => {
   return {
-    plugins: [react(), tailwindcss()],
+    plugins: [
+      {
+        name: 'blog-dev-router',
+        configureServer(server) {
+          server.middlewares.use((req, res, next) => {
+            const rawUrl = req.url ? req.url.split('?')[0] : '';
+            const normalized = rawUrl.replace(/\/$/, '');
+            if (normalized === '/blog/self-care-routine') {
+              req.url = '/blog/self-care-routine/index.html';
+            } else if (normalized === '/blog/slow-living-tips') {
+              req.url = '/blog/slow-living-tips/index.html';
+            } else if (normalized === '/blog/cozy-lifestyle-ideas') {
+              req.url = '/blog/cozy-lifestyle-ideas/index.html';
+            }
+            next();
+          });
+        },
+      },
+      react(),
+      tailwindcss(),
+    ],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
