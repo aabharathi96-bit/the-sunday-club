@@ -54,7 +54,18 @@ export const HomeAeoSection: React.FC<HomeAeoSectionProps> = ({ onNavigateArticl
 
               {/* Expanded Explanation with Internal Link */}
               <p className="font-sans text-sm sm:text-base text-[#4F4439] leading-relaxed">
-                Rather than performing tasks at a sluggish speed, slow living means doing things at the right speed—savoring your morning brew, giving single-minded attention to meaningful projects, and protecting quiet space for restorative rest. When you intentionally decelerate, you reclaim your mental clarity and reduce burnout.
+                Rather than performing tasks at a sluggish speed, slow living means doing things at the right speed—savoring your morning brew, giving single-minded attention to meaningful projects, and protecting quiet space for restorative rest. When you intentionally decelerate, you reclaim your mental clarity and reduce burnout. Discover practical{' '}
+                <a
+                  href="/blog/slow-living-tips/"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigateArticle('slow-living-tips');
+                  }}
+                  className="text-[#8C6D58] underline decoration-[#CDBBB0] decoration-1 underline-offset-4 hover:text-[#574335] hover:decoration-[#8C6D58] font-medium transition-colors cursor-pointer"
+                >
+                  slow living tips for a peaceful everyday life
+                </a>{' '}
+                to transform your daily rhythm.
               </p>
             </div>
 
@@ -67,7 +78,7 @@ export const HomeAeoSection: React.FC<HomeAeoSectionProps> = ({ onNavigateArticl
                 }}
                 className="inline-flex items-center gap-1.5 text-xs font-medium text-[#7D6350] hover:text-[#2E2620] hover:underline font-sans cursor-pointer transition-colors"
               >
-                <span>Read our slow living tips</span>
+                <span>slow living tips for a peaceful everyday life</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -99,7 +110,29 @@ export const HomeAeoSection: React.FC<HomeAeoSectionProps> = ({ onNavigateArticl
 
               {/* Expanded Explanation with Internal Links */}
               <p className="font-sans text-sm sm:text-base text-[#4F4439] leading-relaxed">
-                Start with micro-habits rather than an overwhelming life overhaul. Choose one tactile morning ritual, establish an analog evening boundary, and give yourself permission to leave white space on your weekly calendar. Small, consistent rituals gradually shift your nervous system from frantic urgency into lasting calm.
+                Start with micro-habits rather than an overwhelming life overhaul. Choose one tactile morning ritual, establish an analog evening boundary, and give yourself permission to leave white space on your weekly calendar. Learn how to{' '}
+                <a
+                  href="/blog/self-care-routine/"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigateArticle('self-care-routine');
+                  }}
+                  className="text-[#8C6D58] underline decoration-[#CDBBB0] decoration-1 underline-offset-4 hover:text-[#574335] hover:decoration-[#8C6D58] font-medium transition-colors cursor-pointer"
+                >
+                  create a simple self-care routine
+                </a>{' '}
+                that replenishes your inner reserves, and bring tactile comfort into your home with{' '}
+                <a
+                  href="/blog/cozy-lifestyle-ideas/"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigateArticle('cozy-lifestyle-ideas');
+                  }}
+                  className="text-[#8C6D58] underline decoration-[#CDBBB0] decoration-1 underline-offset-4 hover:text-[#574335] hover:decoration-[#8C6D58] font-medium transition-colors cursor-pointer"
+                >
+                  cozy lifestyle ideas for a relaxing home
+                </a>
+                . Small, consistent rituals gradually shift your nervous system from frantic urgency into lasting calm.
               </p>
             </div>
 
@@ -112,7 +145,7 @@ export const HomeAeoSection: React.FC<HomeAeoSectionProps> = ({ onNavigateArticl
                 }}
                 className="inline-flex items-center gap-1.5 text-xs font-medium text-[#7D6350] hover:text-[#2E2620] hover:underline font-sans cursor-pointer transition-colors"
               >
-                <span>Explore a simple self-care routine</span>
+                <span>create a simple self-care routine</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
 
@@ -124,7 +157,7 @@ export const HomeAeoSection: React.FC<HomeAeoSectionProps> = ({ onNavigateArticl
                 }}
                 className="inline-flex items-center gap-1.5 text-xs font-medium text-[#7D6350] hover:text-[#2E2620] hover:underline font-sans cursor-pointer transition-colors"
               >
-                <span>Discover cozy lifestyle ideas</span>
+                <span>cozy lifestyle ideas for a relaxing home</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>

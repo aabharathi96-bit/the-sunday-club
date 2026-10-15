@@ -284,7 +284,7 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
               Introduction
             </span>
             <p className="font-serif text-base sm:text-lg text-[#383028] leading-relaxed">
-              {article.introduction || article.excerpt}
+              {renderParagraphWithLinks(article.introduction || article.excerpt)}
             </p>
           </div>
 
@@ -389,7 +389,7 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
                     </p>
                     {item.detailedAnswer && (
                       <p className="font-sans text-xs sm:text-sm text-[#6E6155] leading-relaxed pt-1 border-t border-[#F3ECE4]">
-                        {item.detailedAnswer}
+                        {renderParagraphWithLinks(item.detailedAnswer)}
                       </p>
                     )}
                   </div>
@@ -424,7 +424,7 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
               Conclusion
             </span>
             <p className="font-serif italic text-lg sm:text-xl text-[#2E2721] leading-relaxed">
-              {article.conclusion}
+              {renderParagraphWithLinks(article.conclusion)}
             </p>
           </div>
 

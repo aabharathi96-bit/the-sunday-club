@@ -93,7 +93,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onNavigateArticle })
                   }}
                   className="hover:text-white transition-colors cursor-pointer block"
                 >
-                  Read our slow living tips
+                  Slow living tips for a peaceful everyday life
                 </a>
               </li>
               <li>
@@ -107,7 +107,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onNavigateArticle })
                   }}
                   className="hover:text-white transition-colors cursor-pointer block"
                 >
-                  Explore a simple self-care routine
+                  Create a simple self-care routine
                 </a>
               </li>
               <li>
@@ -121,7 +121,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onNavigateArticle })
                   }}
                   className="hover:text-white transition-colors cursor-pointer block"
                 >
-                  Discover cozy lifestyle ideas
+                  Cozy lifestyle ideas for a relaxing home
                 </a>
               </li>
             </ul>

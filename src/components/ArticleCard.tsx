@@ -251,9 +251,10 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
               e.stopPropagation();
               onSelect(article);
             }}
+            aria-label={`Read story: ${article.title}`}
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF5EE] border border-[#E4D9CC] font-sans font-medium text-[#3B322A] group-hover:bg-[#221C18] group-hover:text-white group-hover:border-[#221C18] transition-all cursor-pointer shadow-2xs"
           >
-            <span>Read More</span>
+            <span>Read Story</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
         </div>

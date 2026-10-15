@@ -59,7 +59,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'To embrace slowness in everyday routines, you must first become conscious of the friction points in your day. Notice the moments when you reach for your smartphone out of boredom, or when you eat lunch while typing replies. By gently interrupting these automatic, hurried behaviors, you carve out pockets of spaciousness where clarity can bloom. On [The Sunday Club slow living blog](/), we believe that a truly beautiful life is assembled from hundreds of quiet, deliberate choices.'
+        text: 'To embrace slowness in everyday routines, you must first become conscious of the friction points in your day. Notice the moments when you reach for your smartphone out of boredom, or when you eat lunch while typing replies. By gently interrupting these automatic, hurried behaviors, you carve out pockets of spaciousness where clarity can bloom. At [The Sunday Club](/), we believe that a truly beautiful life is assembled from hundreds of quiet, deliberate choices.'
       },
       {
         type: 'heading',
@@ -91,7 +91,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'How you begin your morning sets the emotional soundtrack for the entire day. Resist the urge to check news or work messages while still under the covers. Instead, drink a glass of lemon water, stretch gently, and let sunlight touch your skin. Pair this quiet start with thoughtful rituals, or [explore a simple self-care routine](/blog/self-care-routine/) to establish grounding before daily obligations begin.'
+        text: 'How you begin your morning sets the emotional soundtrack for the entire day. Resist the urge to check news or work messages while still under the covers. Instead, drink a glass of lemon water, stretch gently, and let sunlight touch your skin. Pair this quiet start with thoughtful rituals, or create a [simple self-care routine](/blog/self-care-routine/) to establish grounding before daily obligations begin.'
       },
       {
         type: 'subheading',
@@ -107,7 +107,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Blue light from laptop and phone screens disrupts natural melatonin production and keeps your thoughts racing late into the evening. Set an "analog curfew" at least one hour before bed. Turn down harsh overhead fixtures, light a natural beeswax candle, play soft instrumental music, and pick up a physical book. If you want to enhance your physical surroundings for rest, [discover cozy lifestyle ideas](/blog/cozy-lifestyle-ideas/) that transform your bedroom into a soothing haven.'
+        text: 'Blue light from laptop and phone screens disrupts natural melatonin production and keeps your thoughts racing late into the evening. Set an "analog curfew" at least one hour before bed. Turn down harsh overhead fixtures, light a natural beeswax candle, play soft instrumental music, and pick up a physical book. If you want to enhance your physical surroundings for rest, explore these [cozy lifestyle ideas](/blog/cozy-lifestyle-ideas/) that transform your bedroom into a soothing haven.'
       },
       {
         type: 'quote',
@@ -203,7 +203,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'By treating personal well-being as a non-negotiable rhythm of your lifestyle—much like brushing your teeth or washing dishes—you remove the friction of having to "find time." You don’t find time for rest; you actively claim it. If you are also exploring mindfulness habits, you can [read our slow living tips](/blog/slow-living-tips/) to see how intentional pacing enriches your routines.'
+        text: 'By treating personal well-being as a non-negotiable rhythm of your lifestyle—much like brushing your teeth or washing dishes—you remove the friction of having to "find time." You don’t find time for rest; you actively claim it. If you are also exploring mindfulness habits, embracing [slow living tips](/blog/slow-living-tips/) can show you how intentional pacing enriches your routines.'
       },
       {
         type: 'heading',
@@ -247,7 +247,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Creating an evening ritual is essential for sound sleep. Signal the end of work by physically closing your laptop and storing it out of sight. Dim the lighting in your living space and [discover cozy lifestyle ideas](/blog/cozy-lifestyle-ideas/) that make relaxing at home deeply inviting and restorative.'
+        text: 'Creating an evening ritual is essential for sound sleep. Signal the end of work by physically closing your laptop and storing it out of sight. Dim the lighting in your living space and embrace these [cozy home ideas](/blog/cozy-lifestyle-ideas/) that make relaxing at home deeply inviting and restorative.'
       },
       {
         type: 'quote',
@@ -298,7 +298,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'The secret to consistency is radical gentleness. On days when you have energy, you might take an hour-long bath and prepare an elaborate meal. On days when you are overwhelmed, self-care might simply mean washing your face, drinking water, and going to bed at nine o’clock. Both are valid. Here at [our slow living blog](/), we celebrate realistic, imperfect self-care that fits your actual life.'
+        text: 'The secret to consistency is radical gentleness. On days when you have energy, you might take an hour-long bath and prepare an elaborate meal. On days when you are overwhelmed, self-care might simply mean washing your face, drinking water, and going to bed at nine o’clock. Both are valid. Here at [The Sunday Club](/), we celebrate realistic, imperfect self-care that fits your actual life.'
       }
     ],
     practicalTips: [
@@ -359,7 +359,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'When curating cozy home ideas, think of your space as an emotional container. Every textile you touch, every bulb you switch on, and every scent in the air either contributes to sensory agitation or invites calm. By cultivating gentle, tactile elements throughout your home, you transform domestic spaces into an everyday refuge. If you want to pair this environment with personal rituals, [read our slow living tips](/blog/slow-living-tips/) to foster holistic inner peace.'
+        text: 'When curating cozy home ideas, think of your space as an emotional container. Every textile you touch, every bulb you switch on, and every scent in the air either contributes to sensory agitation or invites calm. By cultivating gentle, tactile elements throughout your home, you transform domestic spaces into an everyday refuge. If you want to pair this environment with personal rituals, adopting [simple slow living habits](/blog/slow-living-tips/) helps foster holistic inner peace.'
       },
       {
         type: 'heading',
@@ -395,7 +395,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Textures communicate comfort directly through touch. Drape a chunky cable-knit wool throw over the sofa arm, invest in breathable washed linen bedding, and toss down a woven jute or sheepskin rug. When your fingers meet organic, tactile fibers, physical tension naturally melts away. You can easily pair these sensory textures with [a simple self-care routine](/blog/self-care-routine/) to deepen your evening relaxation.'
+        text: 'Textures communicate comfort directly through touch. Drape a chunky cable-knit wool throw over the sofa arm, invest in breathable washed linen bedding, and toss down a woven jute or sheepskin rug. When your fingers meet organic, tactile fibers, physical tension naturally melts away. You can easily pair these sensory textures with nurturing [daily self-care habits](/blog/self-care-routine/) to deepen your evening relaxation.'
       },
       {
         type: 'subheading',
@@ -450,7 +450,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'When we return home from demanding work environments and loud city streets, our nervous systems are overstimulated. Embracing cozy lifestyle ideas serves as a protective buffer. Your home becomes a sacred sanctuary that shields you from external pressure, allowing deep restoration and meaningful connection to unfold naturally. Explore more quiet reflections on [The Sunday Club slow living blog](/).'
+        text: 'When we return home from demanding work environments and loud city streets, our nervous systems are overstimulated. Embracing cozy lifestyle ideas serves as a protective buffer. Your home becomes a sacred sanctuary that shields you from external pressure, allowing deep restoration and meaningful connection to unfold naturally. Explore more quiet reflections on [The Sunday Club](/).'
       }
     ],
     practicalTips: [

@@ -235,6 +235,7 @@ export default function App() {
             <HeroSection
               onExploreClick={() => handleNavigate('journal')}
               onReadFeatured={() => handleSelectArticle(featuredArticle)}
+              onNavigateArticle={handleNavigateArticleBySlug}
             />
 
             {/* Featured Lead Story Section */}

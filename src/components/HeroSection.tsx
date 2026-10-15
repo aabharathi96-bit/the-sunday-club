@@ -5,11 +5,13 @@ import heroSundayMorning from '../assets/images/hero_sunday_morning_179119066357
 interface HeroSectionProps {
   onExploreClick: () => void;
   onReadFeatured: () => void;
+  onNavigateArticle?: (slug: string) => void;
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
   onExploreClick,
   onReadFeatured,
+  onNavigateArticle,
 }) => {
   return (
     <section className="relative overflow-hidden pt-10 pb-16 lg:pt-16 lg:pb-24">
@@ -47,6 +49,49 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <p className="font-serif italic text-lg sm:text-2xl text-[#5C5044] max-w-2xl mx-auto leading-relaxed">
             “A slow living blog and digital sanctuary celebrating intentional habits, peaceful rituals, and cozy everyday moments.”
           </p>
+
+          {/* Curated Guides Internal Links */}
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs sm:text-sm font-sans text-[#705F52]">
+            <span className="text-[#8A7664] font-medium">Explore guides:</span>
+            <a
+              href="/blog/slow-living-tips/"
+              onClick={(e) => {
+                if (onNavigateArticle) {
+                  e.preventDefault();
+                  onNavigateArticle('slow-living-tips');
+                }
+              }}
+              className="text-[#8C6D58] hover:text-[#2E2620] underline decoration-[#D5C2B4] decoration-1 underline-offset-4 font-medium transition-colors cursor-pointer"
+            >
+              slow living tips for a peaceful everyday life
+            </a>
+            <span className="hidden sm:inline text-[#C0B2A3]">·</span>
+            <a
+              href="/blog/self-care-routine/"
+              onClick={(e) => {
+                if (onNavigateArticle) {
+                  e.preventDefault();
+                  onNavigateArticle('self-care-routine');
+                }
+              }}
+              className="text-[#8C6D58] hover:text-[#2E2620] underline decoration-[#D5C2B4] decoration-1 underline-offset-4 font-medium transition-colors cursor-pointer"
+            >
+              create a simple self-care routine
+            </a>
+            <span className="hidden sm:inline text-[#C0B2A3]">·</span>
+            <a
+              href="/blog/cozy-lifestyle-ideas/"
+              onClick={(e) => {
+                if (onNavigateArticle) {
+                  e.preventDefault();
+                  onNavigateArticle('cozy-lifestyle-ideas');
+                }
+              }}
+              className="text-[#8C6D58] hover:text-[#2E2620] underline decoration-[#D5C2B4] decoration-1 underline-offset-4 font-medium transition-colors cursor-pointer"
+            >
+              cozy lifestyle ideas for a relaxing home
+            </a>
+          </div>
         </div>
 
         {/* Hero Visual Card: Polaroid Magazine Spread */}
