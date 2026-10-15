@@ -122,7 +122,7 @@ export default function App() {
     let description = 'Welcome to The Sunday Club, a slow living blog dedicated to simple habits, peaceful everyday routines, and cozy inspiration for an intentional life.';
     let canonical = 'https://the-sunday-club-delta.vercel.app/';
     let ogImage = 'https://the-sunday-club-delta.vercel.app/images/hero_sunday_morning_1791190663579.jpg';
-    let ogImageAlt = 'Cozy sunlit Sunday morning with ceramic mug of coffee, open vintage poetry book, and linen sheets';
+    let ogImageAlt = 'Peaceful morning scene representing slow living and mindful habits';
 
     if (activeTab === 'article' && selectedArticle) {
       title = selectedArticle.seoTitle || `${selectedArticle.title} | The Sunday Club`;

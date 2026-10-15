@@ -58,7 +58,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="relative rounded-2xl overflow-hidden aspect-[16/9] sm:aspect-[21/9] lg:aspect-[24/10] bg-[#EFE7DE]">
             <img
               src={heroSundayMorning}
-              alt="Cozy sunlit Sunday morning with ceramic mug of coffee, open vintage poetry book, and linen sheets"
+              alt="Peaceful morning scene representing slow living and mindful habits"
               className="w-full h-full object-cover object-center transform hover:scale-[1.02] transition-transform duration-1000 ease-out"
               referrerPolicy="no-referrer"
             />

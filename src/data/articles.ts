@@ -33,7 +33,7 @@ export const ARTICLES: Article[] = [
     date: 'Oct 14, 2026',
     readTime: '9 min read',
     heroImage: slowLivingTipsImg,
-    imageAlt: 'Peaceful morning routine with a book and a cup of tea on washed linen sheets',
+    imageAlt: 'Person enjoying a quiet morning with a book and a cup of tea',
     excerpt: 'Explore actionable slow living tips to simplify your days, lower anxiety, and replace the exhaustion of chronic urgency with an intentional, unhurried rhythm.',
     introduction: 'In an era that rewards constant connectivity and celebrating the hustle, pausing to breathe can feel like a quiet rebellion. Many of us wake up to piercing alarms, immediately check notification feeds, and spend the day rushing between competing demands. Yet living at maximum velocity rarely leads to fulfillment; more often, it breeds chronic fatigue and a lingering sense that life is passing by unexamined. Adopting practical slow living tips is not about giving up modern life or moving to an isolated cabin. Instead, it is the deliberate art of reclaiming agency over your hours, curating what deserves your precious energy, and anchoring yourself in the present moment.',
     faq: [
@@ -177,7 +177,7 @@ export const ARTICLES: Article[] = [
     date: 'Oct 14, 2026',
     readTime: '9 min read',
     heroImage: selfCareRoutineImg,
-    imageAlt: 'Mindful self-care ritual flat lay with ceramic teacup, journal, brass pen, and botanical florals',
+    imageAlt: 'Simple self-care routine setup with daily self-care habits journal, herbal tea, and beginners self-care ideas',
     excerpt: 'Discover how to craft a simple self-care routine focused on sustainable daily self-care habits, realistic beginner ideas, and authentic emotional restoration.',
     introduction: 'In our modern wellness landscape, self-care is frequently marketed as an extravagant luxury: expensive weekend spa retreats, 12-step skincare regimens, and designer workout gear. While there is nothing wrong with pampering, equating true care with commercial consumerism often creates more guilt and financial stress. In truth, an effective self-care routine is remarkably simple, deeply personal, and accessible to anyone regardless of budget. Real self-care is the quiet infrastructure that supports your mental, physical, and emotional health so you can move through the world with energy and calm.',
     faq: [
@@ -333,7 +333,7 @@ export const ARTICLES: Article[] = [
     date: 'Oct 14, 2026',
     readTime: '9 min read',
     heroImage: cozyLifestyleIdeasImg,
-    imageAlt: 'Cozy bouclé armchair corner with warm amber lighting, stacked books, and soft textured blanket',
+    imageAlt: 'Cozy lifestyle ideas with warm armchair nook, cozy home ideas, and simple living inspiration',
     excerpt: 'Explore inspiring cozy lifestyle ideas that nurture deep relaxation, calm the senses, and turn your living environment into a comforting retreat from the outside world.',
     introduction: 'Our physical living environment exerts a profound, subconscious influence over our emotional well-being and stress levels. When our homes are chaotic, brightly lit with harsh fluorescent bulbs, or filled with piles of unfinished chores, our minds struggle to enter true rest. In contrast, embracing cozy lifestyle ideas allows you to curate an intentional environment that immediately communicates comfort, warmth, and security to your nervous system. Whether you live in a compact studio apartment or a spacious family house, infusing your space with cozy home ideas creates an anchor of tranquility that cradles you after demanding days.',
     faq: [
