@@ -273,9 +273,9 @@ export default function App() {
                     <span>Scrapbook of Slow Moments</span>
                     <span className="text-[#637F5E]">✦</span>
                   </div>
-                  <h2 className="font-display text-3xl sm:text-4xl text-[#221C18]">
+                  <p className="font-display text-3xl sm:text-4xl text-[#221C18]">
                     A Quiet Visual Diary
-                  </h2>
+                  </p>
                   <p className="font-handwriting text-xl text-[#7A6A5C]">
                     ~ little snapshots of warm coffee, sunlight, and soft thoughts ~
                   </p>
@@ -362,9 +362,9 @@ export default function App() {
                     <span>·</span>
                     <span>Autumn Reads</span>
                   </div>
-                  <h2 className="font-display text-3xl sm:text-4xl text-[#221C18]">
+                  <p className="font-display text-3xl sm:text-4xl text-[#221C18]">
                     Recent Editions for Slow Living
-                  </h2>
+                  </p>
                 </div>
 
                 <div className="flex items-center gap-2">

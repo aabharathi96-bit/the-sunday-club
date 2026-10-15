@@ -92,7 +92,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
               <span>{article.readTime}</span>
             </div>
 
-            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl text-[#221C18] leading-[1.18] group-hover:text-[#6E5848] transition-colors">
+            <p className="font-display text-2xl sm:text-3xl lg:text-4xl text-[#221C18] leading-[1.18] group-hover:text-[#6E5848] transition-colors font-medium">
               <a
                 href={article.url || `/blog/${article.slug}/`}
                 onClick={(e) => {
@@ -103,7 +103,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
               >
                 {article.title}
               </a>
-            </h2>
+            </p>
 
             <p className="font-sans text-sm sm:text-base text-[#5E544A] leading-relaxed line-clamp-3">
               {article.excerpt}
@@ -223,7 +223,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
             <span>{article.readTime}</span>
           </div>
 
-          <h3 className="font-display text-xl text-[#221C18] leading-snug group-hover:text-[#685343] transition-colors">
+          <p className="font-display text-xl text-[#221C18] leading-snug group-hover:text-[#685343] transition-colors font-medium">
             <a
               href={article.url || `/blog/${article.slug}/`}
               onClick={(e) => {
@@ -234,7 +234,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
             >
               {article.title}
             </a>
-          </h3>
+          </p>
 
           <p className="font-sans text-xs sm:text-sm text-[#665B51] leading-relaxed line-clamp-2">
             {article.excerpt}

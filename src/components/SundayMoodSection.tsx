@@ -55,9 +55,9 @@ export const SundayMoodSection: React.FC<SundayMoodSectionProps> = ({
             <span>Weekly Sanctuaries</span>
             <span className="text-[#637F5E]">✧</span>
           </div>
-          <h2 className="font-display text-3xl sm:text-5xl text-[#221C18]">
+          <p className="font-display text-3xl sm:text-5xl text-[#221C18]">
             The Sunday Mood &amp; Reflection
-          </h2>
+          </p>
           <p className="font-handwriting text-xl sm:text-2xl text-[#7A6A5C]">
             ~ choose the atmosphere your spirit craves today ~
           </p>
@@ -143,9 +143,9 @@ export const SundayMoodSection: React.FC<SundayMoodSectionProps> = ({
               <span className="text-[11px] uppercase tracking-widest text-[#8C7665] font-sans font-semibold">
                 Quiet Reflection Pad
               </span>
-              <h3 className="font-display text-2xl text-[#221C18]">
+              <p className="font-display text-2xl text-[#221C18]">
                 A Whisper for Yourself
-              </h3>
+              </p>
               <p className="font-serif italic text-sm text-[#5E5347] leading-relaxed">
                 {activeMood.prompt}
               </p>

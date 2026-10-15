@@ -32,9 +32,9 @@ export const NewsletterSection: React.FC = () => {
           </div>
 
           <div className="space-y-3 max-w-xl mx-auto">
-            <h2 className="font-display text-3xl sm:text-5xl text-[#221C18] leading-tight">
+            <p className="font-display text-3xl sm:text-5xl text-[#221C18] leading-tight font-medium">
               Wake Up With “The Sunday Letter”
-            </h2>
+            </p>
             <p className="font-serif italic text-base sm:text-lg text-[#5E5247] leading-relaxed">
               Every Sunday morning at 8:00 AM, we send a quiet digital letter filled with essays on slow living, our favorite playlists, cozy book recommendations, and seasonal rituals.
             </p>

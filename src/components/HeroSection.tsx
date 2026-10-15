@@ -39,15 +39,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <span className="text-[#C78278]">✧</span>
           </div>
 
+          <p className="text-xs sm:text-sm uppercase tracking-widest text-[#8A7361] font-sans font-semibold">
+            The Sunday Club · Digital Lifestyle Publication
+          </p>
+
           <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-medium tracking-tight text-[#221C18] leading-[1.08] [text-wrap:balance]">
-            The Sunday Club
-            <span className="block text-xl sm:text-2xl lg:text-3xl text-[#7A6655] font-serif italic font-normal mt-2 tracking-normal">
-              A Slow Living Blog for Unhurried Days
+            Your Guide to Slow Living and a More Mindful Everyday Life
+            <span className="block text-xl sm:text-2xl lg:text-3xl text-[#7A6655] font-serif italic font-normal mt-3 tracking-normal">
+              A slow living blog for intentional habits, peaceful rituals, and unhurried days
             </span>
           </h1>
 
           <p className="font-serif italic text-lg sm:text-2xl text-[#5C5044] max-w-2xl mx-auto leading-relaxed">
-            “A slow living blog and digital sanctuary celebrating intentional habits, peaceful rituals, and cozy everyday moments.”
+            “A slow living blog and digital sanctuary celebrating intentional habits, peaceful rituals, simple living inspiration, and cozy everyday moments.”
           </p>
 
           {/* Curated Guides Internal Links */}
@@ -119,9 +123,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   </span>
                   <span className="text-xs text-[#F2DFD8]">✦</span>
                 </div>
-                <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl text-white leading-snug drop-shadow-md">
+                <p className="font-display text-2xl sm:text-3xl lg:text-4xl text-white leading-snug drop-shadow-md font-medium">
                   10 Little Things That Make a Sunday Feel Special
-                </h2>
+                </p>
                 <p className="text-xs sm:text-sm text-[#EFE4D6] font-sans line-clamp-2 drop-shadow">
                   From pre-warmed ceramic mugs and acoustic melodies to leaving the linen curtains drifting in the gentle autumn breeze.
                 </p>
